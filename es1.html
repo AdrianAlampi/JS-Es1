@@ -1,9 +1,30 @@
-<html>
+<html>  
   <head>
-    <titile>ES 1 </titile>
+   <titile>ES 1 </titile>
   </head>
-  <body></body>
-  <button onclick="function (){
-console.log('click')}"
-  ></button>
+  <body>
+    <button onclick="console.log('click da evento')">cliccami da evento</button>
+    <button onclick="funzioneClick('script')"> cliccami da script</button>
+    <button id="btn3"> cliccami da listener</button>
+  
+    <script>
+      // var funzioneClick = function () {
+      //   console.log("click da script");
+      // };
+      // // declaration and execution --> dichiare e eseguire immediatamente la parte di codice aggiungendo due parentesi alla fine
+      // //funzioneClick() --> avvio normale della funzione4
+
+      // var funzioneClickAscoltatore = function(){
+      //   console.log("click da listener");
+      // };
+
+      var funzioneClick = function(stringa){
+        console.log("click da " + stringa);
+      };
+
+      var bottone3 = document.getElementById("btn3");
+      bottone3.addEventListener("click",function(){funzioneClick("listener")});
+    </script>
+     
+  </body>
 </html>
